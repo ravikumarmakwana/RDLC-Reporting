@@ -1,0 +1,22 @@
+Create Table Employee
+(
+    EmployeeId int not null auto_increment,
+    FirstName varchar(50) null,
+    LastName varchar(50) null,
+    DepartmentName varchar(50) null,
+    EmailAddress varchar(255) not null,
+    PhoneNumber varchar(15) not null,
+    BirthDate date not null,
+    Gender tinyint(1) default 0,
+    primary key (EmployeeId)
+);
+
+Create Table Salary
+(
+    SalaryId int not null auto_increment,
+    EmployeeId int not null,
+    SalaryAmount int not null,
+    TransactionDate DateTime default current_timestamp,
+    primary key (SalaryId),
+    foreign key (EmployeeId) references Employee(EmployeeId)
+);

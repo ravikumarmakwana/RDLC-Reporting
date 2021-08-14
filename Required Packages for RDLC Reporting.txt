@@ -1,0 +1,5 @@
+Required Nuget Packages for ASP.Net Core RDLC Reporting
+
+AspNetCore.Reporting
+Microsoft.CodeAnalysis.Workspaces.Common
+System.CodeDom
